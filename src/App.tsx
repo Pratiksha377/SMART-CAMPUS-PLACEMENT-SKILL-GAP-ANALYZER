@@ -17,6 +17,7 @@ import {
   PostingManagementPage,
   CreatePostingPage,
   ApplicantListPage,
+  SearchResultsPage,
 } from '@/pages';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
 import Unauthorized from '@/pages/Unauthorized';
@@ -58,6 +59,7 @@ export const App: React.FC = () => {
           }
         />
         <Route path="/unauthorized" element={<Unauthorized />} />
+        <Route path="/search" element={<SearchResultsPage />} />
 
         {/* Student Portal Protected Routes */}
         <Route element={<ProtectedRoute allowedRoles={['student']} redirectTo="/login" />}>

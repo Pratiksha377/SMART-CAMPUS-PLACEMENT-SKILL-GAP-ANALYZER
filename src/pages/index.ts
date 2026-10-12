@@ -48,3 +48,6 @@ export { default as RecruiterDashboard } from './recruiter/RecruiterDashboard';
 
 export * from './admin/AdminDashboard';
 export { default as AdminDashboard } from './admin/AdminDashboard';
+
+export * from './Search/SearchResultsPage';
+export { default as SearchResultsPage } from './Search/SearchResultsPage';

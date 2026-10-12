@@ -15,6 +15,7 @@ import {
   Shield,
   Briefcase,
 } from 'lucide-react';
+import { SearchBar } from './SearchBar';
 
 interface HeaderProps {
   onToggleMobileNav?: () => void;
@@ -97,6 +98,17 @@ export const Header: React.FC<HeaderProps> = ({
               </p>
             </div>
           </Link>
+        </div>
+
+        {/* Global Quick Search Bar */}
+        <div className="hidden md:block flex-1 max-w-md mx-4">
+          <SearchBar
+            size="sm"
+            placeholder="Search jobs, tech skills, locations..."
+            onSearch={(query) =>
+              navigate(query ? `/search?q=${encodeURIComponent(query)}` : '/search')
+            }
+          />
         </div>
 
         {/* Right Side: Notifications & User Profile Menu */}

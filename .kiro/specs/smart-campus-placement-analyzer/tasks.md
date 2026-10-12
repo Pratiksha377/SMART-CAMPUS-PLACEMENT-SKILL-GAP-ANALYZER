@@ -156,15 +156,15 @@
 
 ### Phase FE11: Search & Advanced Filtering (Week 5)
 
-- [ ] FE11.1 Create `src/components/SearchBar.tsx` global search component
-- [ ] FE11.2 Create `src/pages/Search/SearchResultsPage.tsx` results page
-- [ ] FE11.3 Implement keyword search in opportunities title/description
-- [ ] FE11.4 Create `src/components/AdvancedFilter.tsx` for multi-filter combinations
-- [ ] FE11.5 Create `src/components/FilterChips.tsx` displaying active filters with removal
-- [ ] FE11.6 Create `src/components/Pagination.tsx` component (previous, page numbers, next)
-- [ ] FE11.7 Create sort dropdown (relevance, date, match %)
-- [ ] FE11.8 Implement debounced search and filter API calls
-- [ ] FE11.9 Write Property-Based Tests for Properties 16-17 (Keyword matching, pagination correctness)
+- [x] FE11.1 Create `src/components/SearchBar.tsx` global search component
+- [x] FE11.2 Create `src/pages/Search/SearchResultsPage.tsx` results page
+- [x] FE11.3 Implement keyword search in opportunities title/description
+- [x] FE11.4 Create `src/components/AdvancedFilter.tsx` for multi-filter combinations
+- [x] FE11.5 Create `src/components/FilterChips.tsx` displaying active filters with removal
+- [x] FE11.6 Create `src/components/Pagination.tsx` component (previous, page numbers, next)
+- [x] FE11.7 Create sort dropdown (relevance, date, match %)
+- [x] FE11.8 Implement debounced search and filter API calls
+- [x] FE11.9 Write Property-Based Tests for Properties 16-17 (Keyword matching, pagination correctness)
 
 ### Phase FE12: Notification Center (Week 6)
 
