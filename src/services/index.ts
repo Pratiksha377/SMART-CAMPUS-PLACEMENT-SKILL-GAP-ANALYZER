@@ -4,3 +4,5 @@ export * from './authService';
 export { default as authService } from './authService';
 export * from './profileService';
 export { default as profileService } from './profileService';
+export * from './assessmentService';
+export { default as assessmentService } from './assessmentService';

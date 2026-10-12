@@ -34,4 +34,34 @@ export { default as AuthErrorBoundary } from './AuthErrorBoundary';
 export * from './ErrorBoundary';
 export { default as ErrorBoundary } from './ErrorBoundary';
 
+export * from './FileUploader';
+export { default as FileUploader } from './FileUploader';
+
+export * from './DocumentList';
+export { default as DocumentList } from './DocumentList';
+
+export * from './StudentProfileForm';
+export { default as StudentProfileForm } from './StudentProfileForm';
+
+export * from './StudentProfileView';
+export { default as StudentProfileView } from './StudentProfileView';
+
+export * from './AssessmentCard';
+export { default as AssessmentCard } from './AssessmentCard';
+
+export * from './AssessmentStartModal';
+export { default as AssessmentStartModal } from './AssessmentStartModal';
+
+export * from './AssessmentTimer';
+export { default as AssessmentTimer } from './AssessmentTimer';
+
+export * from './QuestionRenderer';
+export { default as QuestionRenderer } from './QuestionRenderer';
+
+export * from './AssessmentNavigation';
+export { default as AssessmentNavigation } from './AssessmentNavigation';
+
+export * from './AssessmentViewer';
+export { default as AssessmentViewer } from './AssessmentViewer';
+
 export * from './ui';

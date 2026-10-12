@@ -91,15 +91,14 @@ function getLocalProfile(studentId?: string): StudentProfile {
   } catch (err) {
     console.warn('Failed to parse profile from storage', err);
   }
-  return { ...initialMockProfile };
+  return { ...initialMockProfile, id: studentId || initialMockProfile.id };
 }
 
-function setLocalProfile(profile: StudentProfile): void {
+function setLocalProfile(profile: StudentProfile, studentId?: string): void {
   try {
-    localStorage.setItem(
-      `${STORAGE_KEY}_${profile.id}`,
-      JSON.stringify(profile)
-    );
+    const keyId = studentId || profile.id;
+    localStorage.setItem(`${STORAGE_KEY}_${keyId}`, JSON.stringify(profile));
+    localStorage.setItem(`${STORAGE_KEY}_${profile.id}`, JSON.stringify(profile));
     localStorage.setItem(`${STORAGE_KEY}_default`, JSON.stringify(profile));
   } catch (err) {
     console.warn('Failed to persist profile to storage', err);
@@ -112,7 +111,7 @@ export const profileService = {
       const response = await apiClient.get<StudentProfile>(
         `/students/${studentId || 'me'}/profile`
       );
-      setLocalProfile(response.data);
+      setLocalProfile(response.data, studentId);
       return response.data;
     } catch {
       // Fallback to local storage persistence
@@ -129,12 +128,13 @@ export const profileService = {
         `/students/${studentId}/profile`,
         data
       );
-      setLocalProfile(response.data);
+      setLocalProfile(response.data, studentId);
       return response.data;
     } catch {
       const current = getLocalProfile(studentId);
       const updated: StudentProfile = {
         ...current,
+        id: studentId,
         ...data,
         education: {
           ...current.education,
@@ -146,7 +146,7 @@ export const profileService = {
         documents: data.documents || current.documents,
         updatedAt: new Date().toISOString(),
       };
-      setLocalProfile(updated);
+      setLocalProfile(updated, studentId);
       return updated;
     }
   },
@@ -162,7 +162,7 @@ export const profileService = {
       size: file.size,
       type,
       uploadedAt: new Date().toISOString(),
-      url: URL.createObjectURL(file),
+      url: typeof URL !== 'undefined' && URL.createObjectURL ? URL.createObjectURL(file) : undefined,
     };
 
     try {
@@ -177,8 +177,9 @@ export const profileService = {
       return response.data;
     } catch {
       const current = getLocalProfile(studentId);
+      current.id = studentId;
       current.documents = [...(current.documents || []), newDoc];
-      setLocalProfile(current);
+      setLocalProfile(current, studentId);
       return newDoc;
     }
   },
@@ -192,10 +193,11 @@ export const profileService = {
     } catch {
       // Local fallback
       const current = getLocalProfile(studentId);
+      current.id = studentId;
       current.documents = (current.documents || []).filter(
         (doc) => doc.id !== documentId
       );
-      setLocalProfile(current);
+      setLocalProfile(current, studentId);
     }
     return { success: true };
   },

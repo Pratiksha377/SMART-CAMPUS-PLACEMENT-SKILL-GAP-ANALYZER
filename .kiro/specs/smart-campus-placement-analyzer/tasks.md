@@ -63,37 +63,37 @@
 
 ### Phase FE5: Student Profile Page (Week 2-3)
 
-- [ ] FE5.1 Create `src/types/profile.ts` with StudentProfile TypeScript interface
-- [ ] FE5.2 Create Redux slice: `src/store/profileSlice.ts` with actions (setProfile, updateProfile, setDocuments)
-- [ ] FE5.3 Create profile service `src/services/profileService.ts` with placeholder API calls
-- [ ] FE5.4 Create `src/pages/StudentProfile/StudentProfilePage.tsx` main page layout
-- [ ] FE5.5 Create `src/components/StudentProfileForm.tsx` with React Hook Form for all profile fields
-- [ ] FE5.6 Implement form validation for required fields (email, name, education, CGPA) - Requirement 1.4
-- [ ] FE5.7 Create `src/components/FileUploader.tsx` component for document uploads
-- [ ] FE5.8 Create `src/components/DocumentList.tsx` to display uploaded documents with delete/replace
-- [ ] FE5.9 Create `src/components/StudentProfileView.tsx` for read-only profile display
-- [ ] FE5.10 Implement edit/view mode toggle using useState
-- [ ] FE5.11 Create form submission handler with success/error toast notifications
-- [ ] FE5.12 Implement form state management with Redux
-- [ ] FE5.13 Create hooks: `useProfile()`, `useDocuments()` for profile operations
-- [ ] FE5.14 Write Property-Based Tests for Properties 1-3 (Profile round-trip, validation, file upload)
+- [x] FE5.1 Create `src/types/profile.ts` with StudentProfile TypeScript interface
+- [x] FE5.2 Create Redux slice: `src/store/profileSlice.ts` with actions (setProfile, updateProfile, setDocuments)
+- [x] FE5.3 Create profile service `src/services/profileService.ts` with placeholder API calls
+- [x] FE5.4 Create `src/pages/StudentProfile/StudentProfilePage.tsx` main page layout
+- [x] FE5.5 Create `src/components/StudentProfileForm.tsx` with React Hook Form for all profile fields
+- [x] FE5.6 Implement form validation for required fields (email, name, education, CGPA) - Requirement 1.4
+- [x] FE5.7 Create `src/components/FileUploader.tsx` component for document uploads
+- [x] FE5.8 Create `src/components/DocumentList.tsx` to display uploaded documents with delete/replace
+- [x] FE5.9 Create `src/components/StudentProfileView.tsx` for read-only profile display
+- [x] FE5.10 Implement edit/view mode toggle using useState
+- [x] FE5.11 Create form submission handler with success/error toast notifications
+- [x] FE5.12 Implement form state management with Redux
+- [x] FE5.13 Create hooks: `useProfile()`, `useDocuments()` for profile operations
+- [x] FE5.14 Write Property-Based Tests for Properties 1-3 (Profile round-trip, validation, file upload)
 
 ### Phase FE6: Assessment UI (Week 3)
 
-- [ ] FE6.1 Create `src/types/assessment.ts` with Assessment, Question, AssessmentSession interfaces
-- [ ] FE6.2 Create Redux slice: `src/store/assessmentSlice.ts` with assessment state management
-- [ ] FE6.3 Create assessment service `src/services/assessmentService.ts` with placeholder API calls
-- [ ] FE6.4 Create `src/pages/Assessment/AssessmentListPage.tsx` showing available assessments
-- [ ] FE6.5 Create `src/components/AssessmentCard.tsx` displaying assessment title, duration, difficulty
-- [ ] FE6.6 Create `src/components/AssessmentStartModal.tsx` with start confirmation
-- [ ] FE6.7 Create `src/components/AssessmentViewer.tsx` for displaying questions one at a time
-- [ ] FE6.8 Create `src/components/AssessmentTimer.tsx` countdown timer component with warning
-- [ ] FE6.9 Create `src/components/QuestionRenderer.tsx` rendering MCQ/essay/coding questions
-- [ ] FE6.10 Create `src/components/AssessmentNavigation.tsx` with previous/next/pause buttons
-- [ ] FE6.11 Implement localStorage-based auto-save for incomplete assessments
-- [ ] FE6.12 Create `src/pages/Assessment/AssessmentResultsPage.tsx` with score and breakdown
-- [ ] FE6.13 Implement resume incomplete assessment functionality
-- [ ] FE6.14 Write Property-Based Tests for Properties 4-6 (Assessment scoring, resume, results)
+- [x] FE6.1 Create `src/types/assessment.ts` with Assessment, Question, AssessmentSession interfaces
+- [x] FE6.2 Create Redux slice: `src/store/assessmentSlice.ts` with assessment state management
+- [x] FE6.3 Create assessment service `src/services/assessmentService.ts` with placeholder API calls
+- [x] FE6.4 Create `src/pages/Assessment/AssessmentListPage.tsx` showing available assessments
+- [x] FE6.5 Create `src/components/AssessmentCard.tsx` displaying assessment title, duration, difficulty
+- [x] FE6.6 Create `src/components/AssessmentStartModal.tsx` with start confirmation
+- [x] FE6.7 Create `src/components/AssessmentViewer.tsx` for displaying questions one at a time
+- [x] FE6.8 Create `src/components/AssessmentTimer.tsx` countdown timer component with warning
+- [x] FE6.9 Create `src/components/QuestionRenderer.tsx` rendering MCQ/essay/coding questions
+- [x] FE6.10 Create `src/components/AssessmentNavigation.tsx` with previous/next/pause buttons
+- [x] FE6.11 Implement localStorage-based auto-save for incomplete assessments
+- [x] FE6.12 Create `src/pages/Assessment/AssessmentResultsPage.tsx` with score and breakdown
+- [x] FE6.13 Implement resume incomplete assessment functionality
+- [x] FE6.14 Write Property-Based Tests for Properties 4-6 (Assessment scoring, resume, results)
 
 ### Phase FE7: Skill Gap Visualization (Week 3-4)
 

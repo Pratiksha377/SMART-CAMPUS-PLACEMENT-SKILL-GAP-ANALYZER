@@ -1,5 +1,6 @@
 export * from './auth';
 export * from './profile';
+export * from './assessment';
 
 export interface JobOpportunity {
   id: string;

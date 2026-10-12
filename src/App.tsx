@@ -7,6 +7,8 @@ import RegisterForm from '@/components/RegisterForm';
 import AuthErrorBoundary from '@/components/AuthErrorBoundary';
 import Home from '@/pages/Home';
 import StudentDashboard from '@/pages/student/StudentDashboard';
+import StudentProfilePage from '@/pages/StudentProfile/StudentProfilePage';
+import AssessmentListPage from '@/pages/Assessment/AssessmentListPage';
 import RecruiterDashboard from '@/pages/recruiter/RecruiterDashboard';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
 import Unauthorized from '@/pages/Unauthorized';
@@ -52,28 +54,8 @@ export const App: React.FC = () => {
         {/* Student Portal Protected Routes */}
         <Route element={<ProtectedRoute allowedRoles={['student']} redirectTo="/login" />}>
           <Route path="/student/dashboard" element={<StudentDashboard />} />
-          <Route
-            path="/student/profile"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Student Profile & Documents</h2>
-                <p className="text-xs text-slate-400">
-                  Comprehensive profile management and resume upload will be fully expanded in Phase FE5.
-                </p>
-              </div>
-            }
-          />
-          <Route
-            path="/student/assessments"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Adaptive Skill Assessments</h2>
-                <p className="text-xs text-slate-400">
-                  Timed technical question engine and MCQ tests will be fully expanded in Phase FE6.
-                </p>
-              </div>
-            }
-          />
+          <Route path="/student/profile" element={<StudentProfilePage />} />
+          <Route path="/student/assessments" element={<AssessmentListPage />} />
           <Route
             path="/student/skill-gap"
             element={

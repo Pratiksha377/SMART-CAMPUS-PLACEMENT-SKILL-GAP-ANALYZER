@@ -4,6 +4,7 @@ import authReducer from './authSlice';
 import profileReducer from './slices/profileSlice';
 import opportunityReducer from './slices/opportunitySlice';
 import notificationReducer from './slices/notificationSlice';
+import assessmentReducer from './assessmentSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     profile: profileReducer,
     opportunities: opportunityReducer,
     notifications: notificationReducer,
+    assessment: assessmentReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
