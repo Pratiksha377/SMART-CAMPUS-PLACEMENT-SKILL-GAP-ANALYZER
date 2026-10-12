@@ -208,14 +208,14 @@
 
 ### Phase FE15: Frontend Testing (Week 8)
 
-- [ ] FE15.1 Set up Jest and React Testing Library
-- [ ] FE15.2 Create test utilities and fixtures
-- [ ] FE15.3 Write unit tests for all shared components
-- [ ] FE15.4 Write integration tests for page flows
-- [ ] FE15.5 Set up fast-check for Property-Based Testing
-- [ ] FE15.6 Run all Property-Based Tests (Properties 1-30)
-- [ ] FE15.7 Implement performance testing with Lighthouse
-- [ ] FE15.8 Generate test coverage report (target: >80%)
+- [x] FE15.1 Set up Jest and React Testing Library
+- [x] FE15.2 Create test utilities and fixtures
+- [x] FE15.3 Write unit tests for all shared components
+- [x] FE15.4 Write integration tests for page flows
+- [x] FE15.5 Set up fast-check for Property-Based Testing
+- [x] FE15.6 Run all Property-Based Tests (Properties 1-30)
+- [x] FE15.7 Implement performance testing with Lighthouse
+- [x] FE15.8 Generate test coverage report (target: >80%)
 
 ---
 

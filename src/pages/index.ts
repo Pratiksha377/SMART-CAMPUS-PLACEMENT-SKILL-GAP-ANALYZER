@@ -31,17 +31,17 @@ export { default as OpportunityDetailsPage } from './Opportunities/OpportunityDe
 export * from './Applications/ApplicationHistoryPage';
 export { default as ApplicationHistoryPage } from './Applications/ApplicationHistoryPage';
 
-export * from './Recruiter/RecruiterDashboardPage';
-export { default as RecruiterDashboardPage } from './Recruiter/RecruiterDashboardPage';
+export * from './recruiter/RecruiterDashboardPage';
+export { default as RecruiterDashboardPage } from './recruiter/RecruiterDashboardPage';
 
-export * from './Recruiter/PostingManagementPage';
-export { default as PostingManagementPage } from './Recruiter/PostingManagementPage';
+export * from './recruiter/PostingManagementPage';
+export { default as PostingManagementPage } from './recruiter/PostingManagementPage';
 
-export * from './Recruiter/CreatePostingPage';
-export { default as CreatePostingPage } from './Recruiter/CreatePostingPage';
+export * from './recruiter/CreatePostingPage';
+export { default as CreatePostingPage } from './recruiter/CreatePostingPage';
 
-export * from './Recruiter/ApplicantListPage';
-export { default as ApplicantListPage } from './Recruiter/ApplicantListPage';
+export * from './recruiter/ApplicantListPage';
+export { default as ApplicantListPage } from './recruiter/ApplicantListPage';
 
 export * from './recruiter/RecruiterDashboard';
 export { default as RecruiterDashboard } from './recruiter/RecruiterDashboard';

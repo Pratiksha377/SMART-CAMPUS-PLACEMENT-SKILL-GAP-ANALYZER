@@ -88,11 +88,11 @@ export const profileValidationSchema = z.object({
     degree: z.string().min(1, 'Degree is required (e.g. B.Tech, M.S.)'),
     fieldOfStudy: z.string().min(1, 'Field of study / Branch is required (e.g. Computer Science)'),
     graduationYear: z
-      .number({ invalid_type_error: 'Graduation year is required' })
+      .number()
       .min(2000, 'Year must be 2000 or later')
       .max(2035, 'Year must be 2035 or earlier'),
     cgpa: z
-      .number({ invalid_type_error: 'CGPA is required' })
+      .number()
       .min(0, 'CGPA cannot be negative')
       .max(10, 'CGPA cannot exceed 10.0'),
   }),

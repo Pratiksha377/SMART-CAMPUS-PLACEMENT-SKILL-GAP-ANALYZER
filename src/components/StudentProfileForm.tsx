@@ -45,7 +45,7 @@ export const StudentProfileForm: React.FC<StudentProfileFormProps> = ({
     handleSubmit,
     formState: { errors },
   } = useForm<ProfileFormData>({
-    resolver: zodResolver(profileValidationSchema),
+    resolver: zodResolver(profileValidationSchema) as any,
     defaultValues: {
       fullName: initialData?.fullName || '',
       email: initialData?.email || '',
@@ -101,7 +101,7 @@ export const StudentProfileForm: React.FC<StudentProfileFormProps> = ({
   return (
     <form
       noValidate
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit((data) => onSubmit(data as ProfileFormData))}
       data-testid="student-profile-form"
       className={`space-y-8 font-sans ${className}`}
     >

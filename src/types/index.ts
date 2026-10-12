@@ -1,7 +1,15 @@
 export * from './auth';
 export * from './profile';
 export * from './assessment';
-export * from './skillGap';
+export type {
+  SkillPriority,
+  SkillCategory,
+  LearningResource,
+  Recommendation,
+  BenchmarkRoleRequirement,
+  SkillGapAnalysis,
+} from './skillGap';
+export type { SkillProficiency as SkillProficiencyMetric } from './skillGap';
 export * from './opportunity';
 export * from './notification';
 

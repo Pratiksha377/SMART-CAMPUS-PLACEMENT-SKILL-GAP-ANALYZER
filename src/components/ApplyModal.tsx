@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { JobOpportunity } from '@/types/opportunity';
-import { Document } from '@/types/profile';
+import { DocumentMetadata as Document } from '@/types/profile';
 import { Modal } from './ui/Modal';
 import { Button } from './ui/Button';
 import { AlertCircle, FileText, CheckCircle2, ShieldAlert } from 'lucide-react';
@@ -28,7 +28,7 @@ export const ApplyModal: React.FC<ApplyModalProps> = ({
   isSubmitting = false,
 }) => {
   const [selectedResume, setSelectedResume] = useState<string>(
-    availableResumes[0]?.fileName || 'Verified_Profile_Resume.pdf'
+    availableResumes[0]?.name || 'Verified_Profile_Resume.pdf'
   );
   const [notes, setNotes] = useState<string>('');
 
@@ -117,8 +117,8 @@ export const ApplyModal: React.FC<ApplyModalProps> = ({
               className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-indigo-500"
             >
               {availableResumes.map((doc) => (
-                <option key={doc.id} value={doc.fileName}>
-                  {doc.fileName} (Uploaded on {new Date(doc.uploadedAt).toLocaleDateString()})
+                <option key={doc.id} value={doc.name}>
+                  {doc.name} (Uploaded on {new Date(doc.uploadedAt).toLocaleDateString()})
                 </option>
               ))}
             </select>
