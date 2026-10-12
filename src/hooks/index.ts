@@ -7,3 +7,5 @@ export * from './useProfile';
 export { default as useProfile } from './useProfile';
 export * from './useDocuments';
 export { default as useDocuments } from './useDocuments';
+export * from './useNotifications';
+export { default as useNotifications } from './useNotifications';

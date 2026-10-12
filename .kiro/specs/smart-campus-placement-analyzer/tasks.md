@@ -168,19 +168,19 @@
 
 ### Phase FE12: Notification Center (Week 6)
 
-- [ ] FE12.1 Create `src/types/notification.ts` with Notification interface
-- [ ] FE12.2 Create Redux slice: `src/store/notificationSlice.ts` for notification state
-- [ ] FE12.3 Create notification service `src/services/notificationService.ts`
-- [ ] FE12.4 Create `src/components/NotificationBell.tsx` icon with unread badge
-- [ ] FE12.5 Create `src/components/NotificationDropdown.tsx` menu with latest notifications
-- [ ] FE12.6 Create `src/pages/Notifications/NotificationCenterPage.tsx` full page
-- [ ] FE12.7 Create `src/components/NotificationCard.tsx` with notification details
-- [ ] FE12.8 Implement filter by notification type (opportunity_match, status_update, etc)
-- [ ] FE12.9 Create `src/pages/Settings/NotificationPreferencesPage.tsx` with checkboxes
-- [ ] FE12.10 Implement mark as read functionality with visual state change
-- [ ] FE12.11 Implement notification dismissal/deletion
-- [ ] FE12.12 Create auto-refresh hook for polling notifications
-- [ ] FE12.13 Write Property-Based Tests for Properties 18-21 (Triggers, status, preferences, persistence)
+- [x] FE12.1 Create `src/types/notification.ts` with Notification interface
+- [x] FE12.2 Create Redux slice: `src/store/notificationSlice.ts` for notification state
+- [x] FE12.3 Create notification service `src/services/notificationService.ts`
+- [x] FE12.4 Create `src/components/NotificationBell.tsx` icon with unread badge
+- [x] FE12.5 Create `src/components/NotificationDropdown.tsx` menu with latest notifications
+- [x] FE12.6 Create `src/pages/Notifications/NotificationCenterPage.tsx` full page
+- [x] FE12.7 Create `src/components/NotificationCard.tsx` with notification details
+- [x] FE12.8 Implement filter by notification type (opportunity_match, status_update, etc)
+- [x] FE12.9 Create `src/pages/Settings/NotificationPreferencesPage.tsx` with checkboxes
+- [x] FE12.10 Implement mark as read functionality with visual state change
+- [x] FE12.11 Implement notification dismissal/deletion
+- [x] FE12.12 Create auto-refresh hook for polling notifications
+- [x] FE12.13 Write Property-Based Tests for Properties 18-21 (Triggers, status, preferences, persistence)
 
 ### Phase FE13: Admin Dashboard (Week 6-7)
 

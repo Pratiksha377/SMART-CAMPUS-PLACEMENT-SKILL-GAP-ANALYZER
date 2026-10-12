@@ -16,6 +16,7 @@ import {
   Briefcase,
 } from 'lucide-react';
 import { SearchBar } from './SearchBar';
+import { NotificationBell } from './NotificationBell';
 
 interface HeaderProps {
   onToggleMobileNav?: () => void;
@@ -115,17 +116,8 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center gap-3">
           {isAuthenticated && user ? (
             <>
-              {/* Notification Bell */}
-              <Link
-                to="/notifications"
-                className="relative p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900/80 border border-slate-800/80 transition-colors"
-                aria-label="View notifications"
-              >
-                <Bell className="h-4 w-4" />
-                {unreadCount > 0 && (
-                  <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-indigo-500 ring-2 ring-slate-950 animate-pulse" />
-                )}
-              </Link>
+              {/* Notification Bell Component (FE12.4) */}
+              <NotificationBell />
 
               {/* User Dropdown */}
               <div className="relative" ref={menuRef}>

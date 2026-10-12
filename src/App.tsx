@@ -18,6 +18,8 @@ import {
   CreatePostingPage,
   ApplicantListPage,
   SearchResultsPage,
+  NotificationCenterPage,
+  NotificationPreferencesPage,
 } from '@/pages';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
 import Unauthorized from '@/pages/Unauthorized';
@@ -60,6 +62,8 @@ export const App: React.FC = () => {
         />
         <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/search" element={<SearchResultsPage />} />
+        <Route path="/notifications" element={<NotificationCenterPage />} />
+        <Route path="/settings/notifications" element={<NotificationPreferencesPage />} />
 
         {/* Student Portal Protected Routes */}
         <Route element={<ProtectedRoute allowedRoles={['student']} redirectTo="/login" />}>

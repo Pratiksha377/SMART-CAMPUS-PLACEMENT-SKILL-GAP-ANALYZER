@@ -3,17 +3,10 @@ export * from './profile';
 export * from './assessment';
 export * from './skillGap';
 export * from './opportunity';
+export * from './notification';
 
-export interface NotificationItem {
-  id: string;
-  userId: string;
-  title: string;
-  message: string;
-  type: 'info' | 'success' | 'warning' | 'opportunity' | 'status';
-  read: boolean;
-  createdAt: string;
-  link?: string;
-}
+// Backward compatibility alias
+export type NotificationItem = import('./notification').Notification;
 
 export interface ApiResponse<T = unknown> {
   success: boolean;

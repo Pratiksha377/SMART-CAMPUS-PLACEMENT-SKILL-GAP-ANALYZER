@@ -51,3 +51,9 @@ export { default as AdminDashboard } from './admin/AdminDashboard';
 
 export * from './Search/SearchResultsPage';
 export { default as SearchResultsPage } from './Search/SearchResultsPage';
+
+export * from './Notifications/NotificationCenterPage';
+export { default as NotificationCenterPage } from './Notifications/NotificationCenterPage';
+
+export * from './Settings/NotificationPreferencesPage';
+export { default as NotificationPreferencesPage } from './Settings/NotificationPreferencesPage';
