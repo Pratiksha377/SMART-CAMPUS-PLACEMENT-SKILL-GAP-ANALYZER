@@ -12,7 +12,7 @@ export type ApplicationStatus =
 
 export interface RequiredSkill {
   skill: string;
-  level: 'beginner' | 'intermediate' | 'advanced';
+  level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
 }
 
 export interface SalaryRange {
@@ -34,6 +34,7 @@ export interface JobOpportunity {
   requirements?: string[];
   responsibilities?: string[];
   requiredSkills: string[];
+  detailedSkills?: RequiredSkill[];
   salaryRange?: string;
   deadline: string; // ISO date string
   postedAt: string; // ISO date string

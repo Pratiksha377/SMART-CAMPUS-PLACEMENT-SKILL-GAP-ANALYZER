@@ -141,18 +141,18 @@
 
 ### Phase FE10: Recruiter Portal - Job Posting (Week 5)
 
-- [ ] FE10.1 Create `src/pages/Recruiter/RecruiterDashboardPage.tsx` main page
-- [ ] FE10.2 Create `src/components/JobPostingForm.tsx` with React Hook Form
-- [ ] FE10.3 Implement skill requirement input (dynamic array of skills with proficiency)
-- [ ] FE10.4 Implement form validation (title, description, skills, deadline required)
-- [ ] FE10.5 Create `src/pages/Recruiter/PostingManagementPage.tsx` listing recruiter's postings
-- [ ] FE10.6 Create `src/components/PostingCard.tsx` with edit and delete buttons
-- [ ] FE10.7 Implement posting status toggle (open/closed/filled)
-- [ ] FE10.8 Create `src/pages/Recruiter/ApplicantListPage.tsx` for viewing applicants
-- [ ] FE10.9 Create `src/components/ApplicantCard.tsx` with profile preview and skill match %
-- [ ] FE10.10 Create `src/components/ApplicantModal.tsx` for full profile view
-- [ ] FE10.11 Implement sort/filter by skill match percentage
-- [ ] FE10.12 Write Property-Based Tests for Properties 11-13 (Posting round-trip, update, applicant filtering)
+- [x] FE10.1 Create `src/pages/Recruiter/RecruiterDashboardPage.tsx` main page
+- [x] FE10.2 Create `src/components/JobPostingForm.tsx` with React Hook Form
+- [x] FE10.3 Implement skill requirement input (dynamic array of skills with proficiency)
+- [x] FE10.4 Implement form validation (title, description, skills, deadline required)
+- [x] FE10.5 Create `src/pages/Recruiter/PostingManagementPage.tsx` listing recruiter's postings
+- [x] FE10.6 Create `src/components/PostingCard.tsx` with edit and delete buttons
+- [x] FE10.7 Implement posting status toggle (open/closed/filled)
+- [x] FE10.8 Create `src/pages/Recruiter/ApplicantListPage.tsx` for viewing applicants
+- [x] FE10.9 Create `src/components/ApplicantCard.tsx` with profile preview and skill match %
+- [x] FE10.10 Create `src/components/ApplicantModal.tsx` for full profile view
+- [x] FE10.11 Implement sort/filter by skill match percentage
+- [x] FE10.12 Write Property-Based Tests for Properties 11-13 (Posting round-trip, update, applicant filtering)
 
 ### Phase FE11: Search & Advanced Filtering (Week 5)
 

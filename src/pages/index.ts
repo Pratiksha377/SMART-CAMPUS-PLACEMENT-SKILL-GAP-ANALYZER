@@ -31,6 +31,18 @@ export { default as OpportunityDetailsPage } from './Opportunities/OpportunityDe
 export * from './Applications/ApplicationHistoryPage';
 export { default as ApplicationHistoryPage } from './Applications/ApplicationHistoryPage';
 
+export * from './Recruiter/RecruiterDashboardPage';
+export { default as RecruiterDashboardPage } from './Recruiter/RecruiterDashboardPage';
+
+export * from './Recruiter/PostingManagementPage';
+export { default as PostingManagementPage } from './Recruiter/PostingManagementPage';
+
+export * from './Recruiter/CreatePostingPage';
+export { default as CreatePostingPage } from './Recruiter/CreatePostingPage';
+
+export * from './Recruiter/ApplicantListPage';
+export { default as ApplicantListPage } from './Recruiter/ApplicantListPage';
+
 export * from './recruiter/RecruiterDashboard';
 export { default as RecruiterDashboard } from './recruiter/RecruiterDashboard';
 

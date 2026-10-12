@@ -12,7 +12,12 @@ import AssessmentListPage from '@/pages/Assessment/AssessmentListPage';
 import SkillGapPage from '@/pages/SkillGap/SkillGapPage';
 import OpportunitiesPage from '@/pages/Opportunities/OpportunitiesPage';
 import ApplicationHistoryPage from '@/pages/Applications/ApplicationHistoryPage';
-import RecruiterDashboard from '@/pages/recruiter/RecruiterDashboard';
+import {
+  RecruiterDashboardPage,
+  PostingManagementPage,
+  CreatePostingPage,
+  ApplicantListPage,
+} from '@/pages';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
 import Unauthorized from '@/pages/Unauthorized';
 import NotFound from '@/pages/NotFound';
@@ -66,40 +71,10 @@ export const App: React.FC = () => {
 
         {/* Recruiter Portal Protected Routes */}
         <Route element={<ProtectedRoute allowedRoles={['recruiter']} redirectTo="/login" />}>
-          <Route path="/recruiter/dashboard" element={<RecruiterDashboard />} />
-          <Route
-            path="/recruiter/postings"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Manage Job Postings</h2>
-                <p className="text-xs text-slate-400">
-                  Posting management, status toggles, and edit actions will be fully expanded in Phase FE10.
-                </p>
-              </div>
-            }
-          />
-          <Route
-            path="/recruiter/postings/new"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Publish New Job Opening</h2>
-                <p className="text-xs text-slate-400">
-                  Dynamic skill requirement form and job details will be fully expanded in Phase FE10.
-                </p>
-              </div>
-            }
-          />
-          <Route
-            path="/recruiter/applicants"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Applicant Match Pool</h2>
-                <p className="text-xs text-slate-400">
-                  Profile reviews and skill match percentage ranking will be fully expanded in Phase FE10.
-                </p>
-              </div>
-            }
-          />
+          <Route path="/recruiter/dashboard" element={<RecruiterDashboardPage />} />
+          <Route path="/recruiter/postings" element={<PostingManagementPage />} />
+          <Route path="/recruiter/postings/new" element={<CreatePostingPage />} />
+          <Route path="/recruiter/applicants" element={<ApplicantListPage />} />
         </Route>
 
         {/* Admin Dashboard Protected Routes */}
