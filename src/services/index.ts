@@ -8,3 +8,5 @@ export * from './assessmentService';
 export { default as assessmentService } from './assessmentService';
 export * from './skillGapService';
 export { default as skillGapService } from './skillGapService';
+export * from './opportunityService';
+export { default as opportunityService } from './opportunityService';

@@ -112,32 +112,32 @@
 
 ### Phase FE8: Opportunity Discovery (Week 4)
 
-- [ ] FE8.1 Create `src/types/opportunity.ts` with JobOpportunity and Application interfaces
-- [ ] FE8.2 Create Redux slice: `src/store/opportunitySlice.ts` for opportunities state
-- [ ] FE8.3 Create opportunity service `src/services/opportunityService.ts` with placeholder API calls
-- [ ] FE8.4 Create `src/pages/Opportunities/OpportunitiesPage.tsx` main page layout
-- [ ] FE8.5 Create `src/components/OpportunityCard.tsx` displaying job title, company, skills, deadline
-- [ ] FE8.6 Create `src/components/FilterPanel.tsx` with location, company, role type checkboxes
-- [ ] FE8.7 Implement real-time filter logic with debouncing (lodash.debounce)
-- [ ] FE8.8 Create `src/components/OpportunityListing.tsx` with grid/list view toggle
-- [ ] FE8.9 Create `src/pages/Opportunities/OpportunityDetailsPage.tsx` with full job info
-- [ ] FE8.10 Create `src/components/ApplyModal.tsx` with confirmation before application
-- [ ] FE8.11 Implement duplicate application prevention with error message
-- [ ] FE8.12 Create "no results" state with helpful suggestions
-- [ ] FE8.13 Implement loading states with SkeletonLoader
-- [ ] FE8.14 Write Property-Based Tests for Properties 8-10 (Filter combo, duplicate prevention, details)
+- [x] FE8.1 Create `src/types/opportunity.ts` with JobOpportunity and Application interfaces
+- [x] FE8.2 Create Redux slice: `src/store/opportunitySlice.ts` for opportunities state
+- [x] FE8.3 Create opportunity service `src/services/opportunityService.ts` with placeholder API calls
+- [x] FE8.4 Create `src/pages/Opportunities/OpportunitiesPage.tsx` main page layout
+- [x] FE8.5 Create `src/components/OpportunityCard.tsx` displaying job title, company, skills, deadline
+- [x] FE8.6 Create `src/components/FilterPanel.tsx` with location, company, role type checkboxes
+- [x] FE8.7 Implement real-time filter logic with debouncing (lodash.debounce)
+- [x] FE8.8 Create `src/components/OpportunityListing.tsx` with grid/list view toggle
+- [x] FE8.9 Create `src/pages/Opportunities/OpportunityDetailsPage.tsx` with full job info
+- [x] FE8.10 Create `src/components/ApplyModal.tsx` with confirmation before application
+- [x] FE8.11 Implement duplicate application prevention with error message
+- [x] FE8.12 Create "no results" state with helpful suggestions
+- [x] FE8.13 Implement loading states with SkeletonLoader
+- [x] FE8.14 Write Property-Based Tests for Properties 8-10 (Filter combo, duplicate prevention, details)
 
 ### Phase FE9: Student Application History (Week 4)
 
-- [ ] FE9.1 Create `src/pages/Applications/ApplicationHistoryPage.tsx` main page
-- [ ] FE9.2 Create `src/components/ApplicationCard.tsx` showing opportunity title, company, status, date
-- [ ] FE9.3 Create `src/components/StatusBadge.tsx` component (applied, reviewed, shortlisted, rejected, selected)
-- [ ] FE9.4 Implement filter by status using useState and array.filter()
-- [ ] FE9.5 Implement sort by date or company name
-- [ ] FE9.6 Create withdrawal request button with confirmation modal
-- [ ] FE9.7 Create `src/components/ApplicationTimeline.tsx` for application progression visualization
-- [ ] FE9.8 Implement loading and empty states
-- [ ] FE9.9 Write unit tests for application status display and filtering
+- [x] FE9.1 Create `src/pages/Applications/ApplicationHistoryPage.tsx` main page
+- [x] FE9.2 Create `src/components/ApplicationCard.tsx` showing opportunity title, company, status, date
+- [x] FE9.3 Create `src/components/StatusBadge.tsx` component (applied, reviewed, shortlisted, rejected, selected)
+- [x] FE9.4 Implement filter by status using useState and array.filter()
+- [x] FE9.5 Implement sort by date or company name
+- [x] FE9.6 Create withdrawal request button with confirmation modal
+- [x] FE9.7 Create `src/components/ApplicationTimeline.tsx` for application progression visualization
+- [x] FE9.8 Implement loading and empty states
+- [x] FE9.9 Write unit tests for application status display and filtering
 
 ### Phase FE10: Recruiter Portal - Job Posting (Week 5)
 

@@ -79,4 +79,25 @@ export { default as LearningResources } from './LearningResources';
 export * from './SkillGapRecommendations';
 export { default as SkillGapRecommendations } from './SkillGapRecommendations';
 
+export * from './OpportunityCard';
+export { default as OpportunityCard } from './OpportunityCard';
+
+export * from './FilterPanel';
+export { default as FilterPanel } from './FilterPanel';
+
+export * from './OpportunityListing';
+export { default as OpportunityListing } from './OpportunityListing';
+
+export * from './ApplyModal';
+export { default as ApplyModal } from './ApplyModal';
+
+export * from './StatusBadge';
+export { default as StatusBadge } from './StatusBadge';
+
+export * from './ApplicationTimeline';
+export { default as ApplicationTimeline } from './ApplicationTimeline';
+
+export * from './ApplicationCard';
+export { default as ApplicationCard } from './ApplicationCard';
+
 export * from './ui';

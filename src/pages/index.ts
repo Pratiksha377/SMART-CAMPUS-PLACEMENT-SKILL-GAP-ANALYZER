@@ -22,6 +22,15 @@ export { default as AssessmentResultsPage } from './Assessment/AssessmentResults
 export * from './SkillGap/SkillGapPage';
 export { default as SkillGapPage } from './SkillGap/SkillGapPage';
 
+export * from './Opportunities/OpportunitiesPage';
+export { default as OpportunitiesPage } from './Opportunities/OpportunitiesPage';
+
+export * from './Opportunities/OpportunityDetailsPage';
+export { default as OpportunityDetailsPage } from './Opportunities/OpportunityDetailsPage';
+
+export * from './Applications/ApplicationHistoryPage';
+export { default as ApplicationHistoryPage } from './Applications/ApplicationHistoryPage';
+
 export * from './recruiter/RecruiterDashboard';
 export { default as RecruiterDashboard } from './recruiter/RecruiterDashboard';
 

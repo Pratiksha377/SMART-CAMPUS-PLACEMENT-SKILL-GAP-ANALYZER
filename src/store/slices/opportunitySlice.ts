@@ -1,16 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { JobOpportunity } from '@/types';
+import { JobOpportunity, Application, OpportunityFilterCriteria } from '@/types/opportunity';
 
-interface OpportunityFilters {
+export interface OpportunityFilters extends Partial<OpportunityFilterCriteria> {
   searchTerm: string;
   location?: string;
   type?: string;
   minMatchScore?: number;
 }
 
-interface OpportunityState {
+export interface OpportunityState {
   items: JobOpportunity[];
   selectedOpportunity: JobOpportunity | null;
+  applications: Application[];
+  selectedApplication: Application | null;
   filters: OpportunityFilters;
   isLoading: boolean;
   error: string | null;
@@ -19,8 +21,14 @@ interface OpportunityState {
 const initialState: OpportunityState = {
   items: [],
   selectedOpportunity: null,
+  applications: [],
+  selectedApplication: null,
   filters: {
     searchTerm: '',
+    locations: [],
+    companies: [],
+    types: [],
+    workplaceTypes: [],
   },
   isLoading: false,
   error: null,
@@ -64,6 +72,51 @@ export const opportunitySlice = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
+    // Application management actions (Phase FE9)
+    setApplications: (state, action: PayloadAction<Application[]>) => {
+      state.applications = action.payload;
+      state.isLoading = false;
+    },
+    addApplication: (state, action: PayloadAction<Application>) => {
+      // Prevent duplicate in state
+      const exists = state.applications.some(
+        (app) =>
+          app.opportunityId === action.payload.opportunityId &&
+          app.studentId === action.payload.studentId &&
+          app.status !== 'withdrawn'
+      );
+      if (!exists) {
+        state.applications.unshift(action.payload);
+      }
+    },
+    updateApplication: (state, action: PayloadAction<Application>) => {
+      const index = state.applications.findIndex((app) => app.id === action.payload.id);
+      if (index !== -1) {
+        state.applications[index] = action.payload;
+      }
+      if (state.selectedApplication?.id === action.payload.id) {
+        state.selectedApplication = action.payload;
+      }
+    },
+    withdrawApplication: (
+      state,
+      action: PayloadAction<{ applicationId: string; reason?: string }>
+    ) => {
+      const app = state.applications.find((a) => a.id === action.payload.applicationId);
+      if (app) {
+        app.status = 'withdrawn';
+        app.withdrawalReason = action.payload.reason;
+        app.lastUpdated = new Date().toISOString();
+        app.timeline.push({
+          status: 'withdrawn',
+          date: new Date().toISOString(),
+          message: action.payload.reason || 'Candidate requested application withdrawal.',
+        });
+      }
+    },
+    setSelectedApplication: (state, action: PayloadAction<Application | null>) => {
+      state.selectedApplication = action.payload;
+    },
   },
 });
 
@@ -76,6 +129,11 @@ export const {
   setFilters,
   resetFilters,
   setOpportunityError,
+  setApplications,
+  addApplication,
+  updateApplication,
+  withdrawApplication,
+  setSelectedApplication,
 } = opportunitySlice.actions;
 
 export default opportunitySlice.reducer;

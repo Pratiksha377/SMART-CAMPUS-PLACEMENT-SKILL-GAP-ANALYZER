@@ -10,6 +10,8 @@ import StudentDashboard from '@/pages/student/StudentDashboard';
 import StudentProfilePage from '@/pages/StudentProfile/StudentProfilePage';
 import AssessmentListPage from '@/pages/Assessment/AssessmentListPage';
 import SkillGapPage from '@/pages/SkillGap/SkillGapPage';
+import OpportunitiesPage from '@/pages/Opportunities/OpportunitiesPage';
+import ApplicationHistoryPage from '@/pages/Applications/ApplicationHistoryPage';
 import RecruiterDashboard from '@/pages/recruiter/RecruiterDashboard';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
 import Unauthorized from '@/pages/Unauthorized';
@@ -58,28 +60,8 @@ export const App: React.FC = () => {
           <Route path="/student/profile" element={<StudentProfilePage />} />
           <Route path="/student/assessments" element={<AssessmentListPage />} />
           <Route path="/student/skill-gap" element={<SkillGapPage />} />
-          <Route
-            path="/student/opportunities"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Placement Opportunities & Job Discovery</h2>
-                <p className="text-xs text-slate-400">
-                  Opportunity search, filters, and 1-click application modal will be fully expanded in Phase FE8.
-                </p>
-              </div>
-            }
-          />
-          <Route
-            path="/student/applications"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Application Pipeline History</h2>
-                <p className="text-xs text-slate-400">
-                  Application timelines and status progression will be fully expanded in Phase FE9.
-                </p>
-              </div>
-            }
-          />
+          <Route path="/student/opportunities" element={<OpportunitiesPage />} />
+          <Route path="/student/applications" element={<ApplicationHistoryPage />} />
         </Route>
 
         {/* Recruiter Portal Protected Routes */}
