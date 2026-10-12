@@ -1,49 +1,5 @@
 export * from './auth';
-
-export interface StudentProfile {
-  id?: string;
-  userId: string;
-  fullName: string;
-  email: string;
-  phone?: string;
-  education: {
-    institution: string;
-    degree: string;
-    fieldOfStudy: string;
-    graduationYear: number;
-    cgpa: number;
-  };
-  skills: Array<{
-    name: string;
-    proficiency: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
-    score?: number;
-  }>;
-  experience?: Array<{
-    title: string;
-    company: string;
-    startDate: string;
-    endDate?: string;
-    description: string;
-  }>;
-  projects?: Array<{
-    title: string;
-    description: string;
-    technologies: string[];
-    link?: string;
-  }>;
-  documents?: DocumentMetadata[];
-  createdAt?: string;
-  updatedAt?: string;
-}
-
-export interface DocumentMetadata {
-  id: string;
-  name: string;
-  size: number;
-  type: string;
-  uploadedAt: string;
-  url?: string;
-}
+export * from './profile';
 
 export interface JobOpportunity {
   id: string;

@@ -68,35 +68,34 @@ describe('ErrorBoundary Component', () => {
   });
 
   it('supports function fallback with reset capability', async () => {
-    let throwError = true;
-    const handleReset = vi.fn(() => {
-      throwError = false;
-    });
+    const handleReset = vi.fn();
 
-    const { rerender } = render(
-      <ErrorBoundary
-        onReset={handleReset}
-        fallback={({ error, reset }) => (
-          <div>
-            <p>Error: {error.message}</p>
-            <button onClick={reset}>Recover</button>
-          </div>
-        )}
-      >
-        <FaultyComponent shouldThrow={throwError} />
-      </ErrorBoundary>
-    );
+    const ResettableWrapper = () => {
+      const [shouldCrash, setShouldCrash] = React.useState(true);
+      return (
+        <ErrorBoundary
+          onReset={() => {
+            handleReset();
+            setShouldCrash(false);
+          }}
+          fallback={({ error, reset }) => (
+            <div>
+              <p>Error: {error.message}</p>
+              <button onClick={reset}>Recover</button>
+            </div>
+          )}
+        >
+          {shouldCrash ? <FaultyComponent shouldThrow={true} /> : <div>Recovered Content</div>}
+        </ErrorBoundary>
+      );
+    };
+
+    render(<ResettableWrapper />);
 
     expect(screen.getByText('Error: Exploded during render')).toBeInTheDocument();
 
     await userEvent.click(screen.getByRole('button', { name: /recover/i }));
     expect(handleReset).toHaveBeenCalled();
-
-    rerender(
-      <ErrorBoundary>
-        <div>Recovered Content</div>
-      </ErrorBoundary>
-    );
     expect(screen.getByText('Recovered Content')).toBeInTheDocument();
   });
 

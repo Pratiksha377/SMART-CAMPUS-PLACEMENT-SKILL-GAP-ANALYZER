@@ -114,4 +114,6 @@ export const useToastContext = (): ToastContextType => {
   return context;
 };
 
+export const useToast = useToastContext;
+
 export default ToastContext;
