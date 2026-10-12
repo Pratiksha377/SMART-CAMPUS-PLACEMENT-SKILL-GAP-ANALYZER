@@ -49,6 +49,15 @@ export { default as RecruiterDashboard } from './recruiter/RecruiterDashboard';
 export * from './admin/AdminDashboard';
 export { default as AdminDashboard } from './admin/AdminDashboard';
 
+export * from './admin/PlacementTrackerPage';
+export { default as PlacementTrackerPage } from './admin/PlacementTrackerPage';
+
+export * from './admin/ReportGeneratorPage';
+export { default as ReportGeneratorPage } from './admin/ReportGeneratorPage';
+
+export * from './admin/DataExportPage';
+export { default as DataExportPage } from './admin/DataExportPage';
+
 export * from './Search/SearchResultsPage';
 export { default as SearchResultsPage } from './Search/SearchResultsPage';
 

@@ -20,6 +20,9 @@ import {
   SearchResultsPage,
   NotificationCenterPage,
   NotificationPreferencesPage,
+  PlacementTrackerPage,
+  ReportGeneratorPage,
+  DataExportPage,
 } from '@/pages';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
 import Unauthorized from '@/pages/Unauthorized';
@@ -86,64 +89,14 @@ export const App: React.FC = () => {
         {/* Admin Dashboard Protected Routes */}
         <Route element={<ProtectedRoute allowedRoles={['admin']} redirectTo="/login" />}>
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
-          <Route
-            path="/admin/placements"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Placement Drive Tracker</h2>
-                <p className="text-xs text-slate-400">
-                  University-wide placement status tracking will be fully expanded in Phase FE13.
-                </p>
-              </div>
-            }
-          />
-          <Route
-            path="/admin/reports"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Analytics & Report Generator</h2>
-                <p className="text-xs text-slate-400">
-                  Departmental charts and metric generation will be fully expanded in Phase FE13.
-                </p>
-              </div>
-            }
-          />
-          <Route
-            path="/admin/export"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Institutional Data Export</h2>
-                <p className="text-xs text-slate-400">
-                  CSV and Excel report exports will be fully expanded in Phase FE13.
-                </p>
-              </div>
-            }
-          />
+          <Route path="/admin/placements" element={<PlacementTrackerPage />} />
+          <Route path="/admin/reports" element={<ReportGeneratorPage />} />
+          <Route path="/admin/export" element={<DataExportPage />} />
         </Route>
 
         {/* Common Authenticated Routes */}
-        <Route
-          path="/notifications"
-          element={
-            <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-              <h2 className="text-xl font-bold text-white">Notification Center</h2>
-              <p className="text-xs text-slate-400">
-                Opportunity match alerts and status updates will be fully expanded in Phase FE12.
-              </p>
-            </div>
-          }
-        />
-        <Route
-          path="/settings"
-          element={
-            <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-              <h2 className="text-xl font-bold text-white">User Preferences & Settings</h2>
-              <p className="text-xs text-slate-400">
-                Notification preferences and account configurations.
-              </p>
-            </div>
-          }
-        />
+        <Route path="/notifications" element={<NotificationCenterPage />} />
+        <Route path="/settings" element={<NotificationPreferencesPage />} />
 
         {/* 404 Catch-All Route */}
         <Route path="*" element={<NotFound />} />

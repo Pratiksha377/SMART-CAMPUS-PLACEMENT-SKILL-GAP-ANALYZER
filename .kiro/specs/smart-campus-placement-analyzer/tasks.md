@@ -184,15 +184,15 @@
 
 ### Phase FE13: Admin Dashboard (Week 6-7)
 
-- [ ] FE13.1 Create AdminDashboardPage layout
-- [ ] FE13.2 Build MetricsWidget component (total students, opportunities, placements)
-- [ ] FE13.3 Create AnalyticsChart components (bar, line, pie charts)
-- [ ] FE13.4 Build PlacementTrackerPage with application status
-- [ ] FE13.5 Create ReportGeneratorPage
-- [ ] FE13.6 Build DataExportPage with format selection (CSV/Excel)
-- [ ] FE13.7 Implement department filter for analytics
-- [ ] FE13.8 Create date range picker for reports
-- [ ] FE13.9 Write Property-Based Tests for Properties 14-15 (Report accuracy, export integrity)
+- [x] FE13.1 Create AdminDashboardPage layout
+- [x] FE13.2 Build MetricsWidget component (total students, opportunities, placements)
+- [x] FE13.3 Create AnalyticsChart components (bar, line, pie charts)
+- [x] FE13.4 Build PlacementTrackerPage with application status
+- [x] FE13.5 Create ReportGeneratorPage
+- [x] FE13.6 Build DataExportPage with format selection (CSV/Excel)
+- [x] FE13.7 Implement department filter for analytics
+- [x] FE13.8 Create date range picker for reports
+- [x] FE13.9 Write Property-Based Tests for Properties 14-15 (Report accuracy, export integrity)
 
 ### Phase FE14: Responsive Design & Refinement (Week 7-8)
 
