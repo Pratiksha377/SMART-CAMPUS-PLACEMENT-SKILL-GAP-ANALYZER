@@ -6,3 +6,5 @@ export * from './profileService';
 export { default as profileService } from './profileService';
 export * from './assessmentService';
 export { default as assessmentService } from './assessmentService';
+export * from './skillGapService';
+export { default as skillGapService } from './skillGapService';

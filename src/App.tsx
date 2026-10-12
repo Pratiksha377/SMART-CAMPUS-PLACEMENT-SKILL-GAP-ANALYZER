@@ -9,6 +9,7 @@ import Home from '@/pages/Home';
 import StudentDashboard from '@/pages/student/StudentDashboard';
 import StudentProfilePage from '@/pages/StudentProfile/StudentProfilePage';
 import AssessmentListPage from '@/pages/Assessment/AssessmentListPage';
+import SkillGapPage from '@/pages/SkillGap/SkillGapPage';
 import RecruiterDashboard from '@/pages/recruiter/RecruiterDashboard';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
 import Unauthorized from '@/pages/Unauthorized';
@@ -56,17 +57,7 @@ export const App: React.FC = () => {
           <Route path="/student/dashboard" element={<StudentDashboard />} />
           <Route path="/student/profile" element={<StudentProfilePage />} />
           <Route path="/student/assessments" element={<AssessmentListPage />} />
-          <Route
-            path="/student/skill-gap"
-            element={
-              <div className="glass-card rounded-2xl p-8 text-center space-y-2 border border-slate-800">
-                <h2 className="text-xl font-bold text-white">Skill Gap Analysis & Radar Charts</h2>
-                <p className="text-xs text-slate-400">
-                  Interactive radar and proficiency visualizations will be fully expanded in Phase FE7.
-                </p>
-              </div>
-            }
-          />
+          <Route path="/student/skill-gap" element={<SkillGapPage />} />
           <Route
             path="/student/opportunities"
             element={

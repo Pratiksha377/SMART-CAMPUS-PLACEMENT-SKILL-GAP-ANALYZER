@@ -19,6 +19,9 @@ export { default as AssessmentListPage } from './Assessment/AssessmentListPage';
 export * from './Assessment/AssessmentResultsPage';
 export { default as AssessmentResultsPage } from './Assessment/AssessmentResultsPage';
 
+export * from './SkillGap/SkillGapPage';
+export { default as SkillGapPage } from './SkillGap/SkillGapPage';
+
 export * from './recruiter/RecruiterDashboard';
 export { default as RecruiterDashboard } from './recruiter/RecruiterDashboard';
 

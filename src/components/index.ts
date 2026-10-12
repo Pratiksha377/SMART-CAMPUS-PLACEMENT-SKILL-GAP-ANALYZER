@@ -64,4 +64,19 @@ export { default as AssessmentNavigation } from './AssessmentNavigation';
 export * from './AssessmentViewer';
 export { default as AssessmentViewer } from './AssessmentViewer';
 
+export * from './SkillPriorityIndicator';
+export { default as SkillPriorityIndicator } from './SkillPriorityIndicator';
+
+export * from './SkillComparison';
+export { default as SkillComparison } from './SkillComparison';
+
+export * from './SkillProficiencyChart';
+export { default as SkillProficiencyChart } from './SkillProficiencyChart';
+
+export * from './LearningResources';
+export { default as LearningResources } from './LearningResources';
+
+export * from './SkillGapRecommendations';
+export { default as SkillGapRecommendations } from './SkillGapRecommendations';
+
 export * from './ui';

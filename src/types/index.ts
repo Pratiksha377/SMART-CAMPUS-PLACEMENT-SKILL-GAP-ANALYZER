@@ -1,6 +1,7 @@
 export * from './auth';
 export * from './profile';
 export * from './assessment';
+export * from './skillGap';
 
 export interface JobOpportunity {
   id: string;
