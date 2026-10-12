@@ -268,8 +268,40 @@ export const PlacementTrackerPage: React.FC = () => {
             </p>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs" data-testid="placement-tracker-table">
+          <>
+            {/* Mobile Cards View (< md screens) */}
+            <div className="block md:hidden space-y-3 p-3 divide-y divide-slate-800/40" data-testid="placement-tracker-mobile-cards">
+              {filteredRecords.map((record) => (
+                <div key={record.id} className="pt-3 first:pt-0 space-y-2.5">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <h4 className="text-sm font-bold text-white">{record.studentName}</h4>
+                      <p className="text-[11px] font-mono text-slate-400">{record.rollNo} • {record.department}</p>
+                    </div>
+                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-semibold border ${statusColor(record.status)}`}>
+                      {record.status}
+                    </span>
+                  </div>
+                  <div className="text-xs text-slate-300 flex items-center justify-between">
+                    <span className="flex items-center gap-1.5 font-medium">
+                      <Building2 className="h-3.5 w-3.5 text-indigo-400" />
+                      {record.company} ({record.role})
+                    </span>
+                    <span className="font-semibold text-emerald-400">
+                      {record.packageLPA > 0 ? `₹${record.packageLPA} LPA` : '—'}
+                    </span>
+                  </div>
+                  <div className="text-[11px] text-slate-400 flex items-center justify-between pt-1">
+                    <span>CGPA: {record.cgpa}</span>
+                    <span>Date: {record.driveDate}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Table View (>= md screens) */}
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs" data-testid="placement-tracker-table">
               <thead>
                 <tr className="bg-slate-900/80 border-b border-slate-800 text-slate-400">
                   <th className="py-3 px-4 font-semibold">Student Name</th>
@@ -373,7 +405,8 @@ export const PlacementTrackerPage: React.FC = () => {
               </tbody>
             </table>
           </div>
-        )}
+        </>
+      )}
       </div>
     </div>
   );

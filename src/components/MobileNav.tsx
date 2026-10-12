@@ -30,12 +30,13 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true">
+    <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true" data-testid="mobile-nav-drawer">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm transition-opacity"
         onClick={onClose}
         aria-hidden="true"
+        data-testid="mobile-nav-backdrop"
       />
 
       {/* Drawer Panel */}
@@ -43,7 +44,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <div className="space-y-6">
           {/* Header inside drawer */}
           <div className="flex items-center justify-between pb-4 border-b border-slate-800">
-            <Link to="/" onClick={onClose} className="flex items-center gap-2.5">
+            <Link to="/" onClick={onClose} className="flex items-center gap-2.5 touch-target">
               <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center text-white shadow-md">
                 <GraduationCap className="h-5 w-5" />
               </div>
@@ -56,8 +57,9 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="touch-target p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
               aria-label="Close navigation"
+              data-testid="mobile-nav-close"
             >
               <X className="h-5 w-5" />
             </button>

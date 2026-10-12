@@ -100,4 +100,7 @@ export { default as ApplicationTimeline } from './ApplicationTimeline';
 export * from './ApplicationCard';
 export { default as ApplicationCard } from './ApplicationCard';
 
+export * from './ResponsiveDataView';
+export { default as ResponsiveDataView } from './ResponsiveDataView';
+
 export * from './ui';

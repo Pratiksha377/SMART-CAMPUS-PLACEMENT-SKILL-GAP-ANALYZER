@@ -9,3 +9,5 @@ export * from './useDocuments';
 export { default as useDocuments } from './useDocuments';
 export * from './useNotifications';
 export { default as useNotifications } from './useNotifications';
+export * from './useBreakpoint';
+export { default as useBreakpoint } from './useBreakpoint';

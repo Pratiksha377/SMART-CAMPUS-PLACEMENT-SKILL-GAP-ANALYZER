@@ -73,8 +73,9 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={onToggleMobileNav}
-            className="lg:hidden p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition-colors"
+            className="lg:hidden touch-target p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition-colors"
             aria-label={isMobileNavOpen ? 'Close navigation' : 'Open navigation'}
+            data-testid="mobile-menu-toggle"
           >
             {isMobileNavOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

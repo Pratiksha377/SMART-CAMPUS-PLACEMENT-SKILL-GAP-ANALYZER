@@ -27,3 +27,6 @@ export { default as FormField } from './FormField';
 
 export * from './SkeletonLoader';
 export { default as SkeletonLoader } from './SkeletonLoader';
+
+export * from './LazyImage';
+export { default as LazyImage } from './LazyImage';

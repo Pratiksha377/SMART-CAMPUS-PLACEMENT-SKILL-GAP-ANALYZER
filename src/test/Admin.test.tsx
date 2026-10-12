@@ -170,8 +170,8 @@ describe('Admin Dashboard & Operations UI (Phase FE13)', () => {
       const searchInput = screen.getByTestId('tracker-search-input');
       fireEvent.change(searchInput, { target: { value: 'Aarav' } });
 
-      // Check row exists
-      expect(screen.getByText('Aarav Sharma')).toBeInTheDocument();
+      // Check row exists in tracker
+      expect(screen.getAllByText('Aarav Sharma')[0]).toBeInTheDocument();
 
       // Update status button click
       const editBtn = screen.getByTestId('btn-edit-pr-1');
@@ -195,7 +195,7 @@ describe('Admin Dashboard & Operations UI (Phase FE13)', () => {
       fireEvent.click(interviewTab);
 
       // Verify row for interview student
-      expect(screen.getByText('Sneha Reddy')).toBeInTheDocument();
+      expect(screen.getAllByText('Sneha Reddy')[0]).toBeInTheDocument();
     });
   });
 

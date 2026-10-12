@@ -196,15 +196,15 @@
 
 ### Phase FE14: Responsive Design & Refinement (Week 7-8)
 
-- [ ] FE14.1 Implement mobile-first responsive breakpoints
-- [ ] FE14.2 Test all components on mobile (320px), tablet (768px), desktop (1024px+)
-- [ ] FE14.3 Implement touch-friendly button sizes and spacing
-- [ ] FE14.4 Create mobile-optimized navigation (hamburger menu)
-- [ ] FE14.5 Implement responsive tables/cards layout switching
-- [ ] FE14.6 Create responsive modals and dialogs
-- [ ] FE14.7 Test and fix responsive form layouts
-- [ ] FE14.8 Implement lazy loading for images
-- [ ] FE14.9 Write Property-Based Tests for Properties 26-27 (Viewport adaptation, design consistency)
+- [x] FE14.1 Implement mobile-first responsive breakpoints
+- [x] FE14.2 Test all components on mobile (320px), tablet (768px), desktop (1024px+)
+- [x] FE14.3 Implement touch-friendly button sizes and spacing
+- [x] FE14.4 Create mobile-optimized navigation (hamburger menu)
+- [x] FE14.5 Implement responsive tables/cards layout switching
+- [x] FE14.6 Create responsive modals and dialogs
+- [x] FE14.7 Test and fix responsive form layouts
+- [x] FE14.8 Implement lazy loading for images
+- [x] FE14.9 Write Property-Based Tests for Properties 26-27 (Viewport adaptation, design consistency)
 
 ### Phase FE15: Frontend Testing (Week 8)
 
