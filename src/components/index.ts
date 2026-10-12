@@ -30,3 +30,8 @@ export { default as AuthErrorAlert } from './AuthErrorAlert';
 
 export * from './AuthErrorBoundary';
 export { default as AuthErrorBoundary } from './AuthErrorBoundary';
+
+export * from './ErrorBoundary';
+export { default as ErrorBoundary } from './ErrorBoundary';
+
+export * from './ui';

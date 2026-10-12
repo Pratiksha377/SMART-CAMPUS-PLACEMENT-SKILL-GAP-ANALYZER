@@ -47,19 +47,19 @@
 
 ### Phase FE4: Shared Components Library (Week 2)
 
-- [ ] FE4.1 Create `src/components/ui/Button.tsx` with variants (primary, secondary, danger, disabled)
-- [ ] FE4.2 Create `src/components/ui/TextInput.tsx` with label, error, and validation support
-- [ ] FE4.3 Create `src/components/ui/Modal.tsx` with header, body, footer and customizable content
-- [ ] FE4.4 Create `src/components/ui/Toast.tsx` notification component with auto-dismiss
-- [ ] FE4.5 Create `src/components/ui/Spinner.tsx` loading indicator component
-- [ ] FE4.6 Create `src/components/ui/Card.tsx` reusable card container with shadow and padding
-- [ ] FE4.7 Create `src/components/ui/Badge.tsx` and `Tag.tsx` components
-- [ ] FE4.8 Create `src/components/ui/FormField.tsx` wrapper with label, error, and help text
-- [ ] FE4.9 Create `src/components/ErrorBoundary.tsx` class component for error handling
-- [ ] FE4.10 Create `src/components/ui/SkeletonLoader.tsx` for loading states
-- [ ] FE4.11 Create `src/hooks/useToast.ts` custom hook for toast notifications
-- [ ] FE4.12 Create Storybook stories for component documentation
-- [ ] FE4.13 Write unit tests for all UI components
+- [x] FE4.1 Create `src/components/ui/Button.tsx` with variants (primary, secondary, danger, disabled)
+- [x] FE4.2 Create `src/components/ui/TextInput.tsx` with label, error, and validation support
+- [x] FE4.3 Create `src/components/ui/Modal.tsx` with header, body, footer and customizable content
+- [x] FE4.4 Create `src/components/ui/Toast.tsx` notification component with auto-dismiss
+- [x] FE4.5 Create `src/components/ui/Spinner.tsx` loading indicator component
+- [x] FE4.6 Create `src/components/ui/Card.tsx` reusable card container with shadow and padding
+- [x] FE4.7 Create `src/components/ui/Badge.tsx` and `Tag.tsx` components
+- [x] FE4.8 Create `src/components/ui/FormField.tsx` wrapper with label, error, and help text
+- [x] FE4.9 Create `src/components/ErrorBoundary.tsx` class component for error handling
+- [x] FE4.10 Create `src/components/ui/SkeletonLoader.tsx` for loading states
+- [x] FE4.11 Create `src/hooks/useToast.ts` custom hook for toast notifications
+- [x] FE4.12 Create Storybook stories for component documentation
+- [x] FE4.13 Write unit tests for all UI components
 
 ### Phase FE5: Student Profile Page (Week 2-3)
 
