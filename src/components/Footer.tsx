@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
               <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center text-white shadow-md">
                 <GraduationCap className="h-5 w-5" />
               </div>
-              <span className="font-bold text-sm text-white tracking-tight">SmartCampus</span>
+              <span className="font-bold text-sm text-white tracking-tight">Skill Studio</span>
             </div>
             <p className="text-[11px] text-slate-400 leading-relaxed">
               Empowering students, recruiters, and placement directors with intelligent skill gap analytics and automated job matching.

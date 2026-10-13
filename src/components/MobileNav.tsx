@@ -49,7 +49,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                 <GraduationCap className="h-5 w-5" />
               </div>
               <div>
-                <span className="font-bold text-base text-white">SmartCampus</span>
+                <span className="font-bold text-base text-white">Skill Studio</span>
                 <p className="text-[10px] text-slate-400">Placement Analyzer</p>
               </div>
             </Link>

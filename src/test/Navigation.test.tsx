@@ -8,7 +8,7 @@ import { renderWithProviders } from './test-utils';
 describe('Header & Navigation Components', () => {
   it('renders Header brand logo and title', () => {
     renderWithProviders(<Header />);
-    expect(screen.getByText('SmartCampus')).toBeInTheDocument();
+    expect(screen.getByText('Skill Studio')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /sign in/i })).toBeInTheDocument();
   });
 
