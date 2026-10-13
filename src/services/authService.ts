@@ -20,22 +20,24 @@ export const authService = {
         // Fallback for demo / development / serverless deployment
         await new Promise((res) => setTimeout(res, 400));
 
-        const authorizedAdmins: Record<string, string> = {
-          'amishakalita380@gmail.com': 'Amisha Kalita',
-          'shrawmana@gmail.com': 'Shrawmana',
+        const authorizedUsers: Record<string, { name: string; role: 'student' | 'recruiter' | 'admin' }> = {
+          'amishakalita380@gmail.com': { name: 'Amisha Kalita', role: 'student' },
+          'shrawmana@gmail.com': { name: 'Shrawmana', role: 'student' },
         };
 
         const normalizedEmail = credentials.email.toLowerCase();
-        const isAdmin = Boolean(authorizedAdmins[normalizedEmail]) || normalizedEmail.includes('admin');
+        const configuredUser = authorizedUsers[normalizedEmail];
 
-        const role = isAdmin
+        const role = configuredUser
+          ? configuredUser.role
+          : normalizedEmail.includes('admin')
           ? 'admin'
           : normalizedEmail.includes('recruiter')
           ? 'recruiter'
           : 'student';
 
         const displayName =
-          authorizedAdmins[normalizedEmail] ||
+          configuredUser?.name ||
           credentials.email.split('@')[0].replace('.', ' ');
 
         const mockResponse: AuthResponse = {

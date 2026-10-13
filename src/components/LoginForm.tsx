@@ -197,7 +197,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
               className="px-2 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700/80 text-left border border-slate-700/60 hover:border-indigo-500/50 transition-all text-xs"
             >
               <div className="font-medium text-slate-200 truncate">Amisha Kalita</div>
-              <div className="text-[10px] text-indigo-400 font-semibold">Admin Access</div>
+              <div className="text-[10px] text-indigo-400 font-semibold">Student Access</div>
             </button>
             <button
               type="button"
@@ -208,7 +208,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
               className="px-2 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700/80 text-left border border-slate-700/60 hover:border-indigo-500/50 transition-all text-xs"
             >
               <div className="font-medium text-slate-200 truncate">Shrawmana</div>
-              <div className="text-[10px] text-indigo-400 font-semibold">Admin Access</div>
+              <div className="text-[10px] text-indigo-400 font-semibold">Student Access</div>
             </button>
           </div>
         </div>
