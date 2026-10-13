@@ -193,22 +193,48 @@ export const LoginForm: React.FC<LoginFormProps> = ({
               onClick={() => {
                 setValue('email', 'amishakalita380@gmail.com', { shouldValidate: true });
                 setValue('password', 'campus123', { shouldValidate: true });
+                const authResp: AuthResponse = {
+                  user: {
+                    id: 'usr-amisha',
+                    email: 'amishakalita380@gmail.com',
+                    name: 'Amisha Kalita',
+                    role: 'student',
+                    createdAt: new Date().toISOString(),
+                  },
+                  token: 'demo-token-amisha',
+                  message: 'Logged in successfully',
+                };
+                dispatch(login(authResp));
+                onSuccess?.(authResp);
               }}
               className="px-2 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700/80 text-left border border-slate-700/60 hover:border-indigo-500/50 transition-all text-xs"
             >
               <div className="font-medium text-slate-200 truncate">Amisha Kalita</div>
-              <div className="text-[10px] text-indigo-400 font-semibold">Student Access</div>
+              <div className="text-[10px] text-indigo-400 font-semibold">Instant Student Login &rarr;</div>
             </button>
             <button
               type="button"
               onClick={() => {
                 setValue('email', 'shrawmana@gmail.com', { shouldValidate: true });
                 setValue('password', 'campus123', { shouldValidate: true });
+                const authResp: AuthResponse = {
+                  user: {
+                    id: 'usr-shrawmana',
+                    email: 'shrawmana@gmail.com',
+                    name: 'Shrawmana',
+                    role: 'student',
+                    createdAt: new Date().toISOString(),
+                  },
+                  token: 'demo-token-shrawmana',
+                  message: 'Logged in successfully',
+                };
+                dispatch(login(authResp));
+                onSuccess?.(authResp);
               }}
               className="px-2 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700/80 text-left border border-slate-700/60 hover:border-indigo-500/50 transition-all text-xs"
             >
               <div className="font-medium text-slate-200 truncate">Shrawmana</div>
-              <div className="text-[10px] text-indigo-400 font-semibold">Student Access</div>
+              <div className="text-[10px] text-indigo-400 font-semibold">Instant Student Login &rarr;</div>
             </button>
           </div>
         </div>
