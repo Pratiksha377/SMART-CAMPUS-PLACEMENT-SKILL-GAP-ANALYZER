@@ -43,6 +43,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
@@ -179,6 +180,37 @@ export const LoginForm: React.FC<LoginFormProps> = ({
             />
             <span className="text-xs text-slate-400 font-medium">Remember me for 30 days</span>
           </label>
+        </div>
+
+        {/* Quick Demo Access for Authorized Team Accounts */}
+        <div className="pt-1.5 pb-0.5">
+          <div className="flex items-center justify-between gap-1 text-[11px] text-slate-400 mb-1.5">
+            <span>Authorized Quick Access:</span>
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setValue('email', 'amishakalita380@gmail.com', { shouldValidate: true });
+                setValue('password', 'campus123', { shouldValidate: true });
+              }}
+              className="px-2 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700/80 text-left border border-slate-700/60 hover:border-indigo-500/50 transition-all text-xs"
+            >
+              <div className="font-medium text-slate-200 truncate">Amisha Kalita</div>
+              <div className="text-[10px] text-indigo-400 font-semibold">Admin Access</div>
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setValue('email', 'shrawmana@gmail.com', { shouldValidate: true });
+                setValue('password', 'campus123', { shouldValidate: true });
+              }}
+              className="px-2 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700/80 text-left border border-slate-700/60 hover:border-indigo-500/50 transition-all text-xs"
+            >
+              <div className="font-medium text-slate-200 truncate">Shrawmana</div>
+              <div className="text-[10px] text-indigo-400 font-semibold">Admin Access</div>
+            </button>
+          </div>
         </div>
 
         {/* Submit Button */}

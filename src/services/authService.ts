@@ -17,19 +17,32 @@ export const authService = {
         axiosError?.message?.includes('Network Error') ||
         import.meta.env.MODE === 'test'
       ) {
-        // Fallback for demo / development
+        // Fallback for demo / development / serverless deployment
         await new Promise((res) => setTimeout(res, 400));
-        const role = credentials.email.includes('recruiter')
-          ? 'recruiter'
-          : credentials.email.includes('admin')
+
+        const authorizedAdmins: Record<string, string> = {
+          'amishakalita380@gmail.com': 'Amisha Kalita',
+          'shrawmana@gmail.com': 'Shrawmana',
+        };
+
+        const normalizedEmail = credentials.email.toLowerCase();
+        const isAdmin = Boolean(authorizedAdmins[normalizedEmail]) || normalizedEmail.includes('admin');
+
+        const role = isAdmin
           ? 'admin'
+          : normalizedEmail.includes('recruiter')
+          ? 'recruiter'
           : 'student';
+
+        const displayName =
+          authorizedAdmins[normalizedEmail] ||
+          credentials.email.split('@')[0].replace('.', ' ');
 
         const mockResponse: AuthResponse = {
           user: {
             id: `usr-${Date.now()}`,
             email: credentials.email,
-            name: credentials.email.split('@')[0].replace('.', ' '),
+            name: displayName,
             role,
             createdAt: new Date().toISOString(),
           },
